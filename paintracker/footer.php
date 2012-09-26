@@ -1,0 +1,1 @@
+<div class="footer"><p class="centered"><a href="index.html">Home</a> | <a href="terms.php" target="_blank">Terms and Conditions</a> | <a href="policy.php" target="_blank">Privacy Policy</a></p><p class="copyright">Copyright Deborah Barrett</p></div>

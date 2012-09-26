@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>amCharts Example</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="amcharts.js" type="text/javascript"></script>
+        <script src="raphael.js" type="text/javascript"></script>       
+        <script type="text/javascript">
+        // declaring variables
+        var chart;
+        var dataProvider;
+        // this method called after all page contents are loaded
+        window.onload = function() {
+            createChart();           
+            loadCSV("data.txt");                                   
+        }
+        // method which loads external data
+        function loadCSV(file) {
+            if (window.XMLHttpRequest) {
+                // IE7+, Firefox, Chrome, Opera, Safari
+                var request = new XMLHttpRequest();
+            }
+            else {
+                // code for IE6, IE5
+                var request = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            // load
+            request.open('GET', file, false);
+            request.send();
+            parseCSV(request.responseText);
+        }
+          // method which parses a date string in the format YYYY-MM-DD and creates a Date object
+          function parseDate(dateString) {
+               // split the string get each field
+               var dateArray = dateString.split("-");
+               // now lets create a new Date instance, using year, month and day as parameters
+               // month count starts with 0, so we have to convert the month number
+               var date = new Date(Number(dateArray[0]), Number(dateArray[1]) - 1, Number(dateArray[2]));
+               return date;
+          }
+        // method which parses csv data
+        function parseCSV(data){
+            //replace UNIX new line
+            data = data.replace (/\r\n/g, "\n");
+            //replace MAC new lines
+            data = data.replace (/\r/g, "\n");
+            //split into rows
+            var rows = data.split("\n");
+            // create array which will hold our data:
+            dataProvider = [];
+            // loop through all rows
+            for (var i = 0; i < rows.length; i++){
+                // this line helps to skip empty rows
+                if (rows[i]) {                   
+                    // our columns are separated by comma
+                    var column = rows[i].split(","); 
+                    // column is array now
+                    // first item is date
+                    var date = parseDate(column[0]);
+                    // second item is value of the second column
+                    var value1 = column[1];
+                    // third item is value of the fird column
+                    var value2 = column[2];
+                    // create object which contains all these items:
+                    var dataObject = {date:date, value1:value1, value2:value2};
+                    // add object to dataProvider array
+                    dataProvider.push(dataObject);
+                }
+            }
+            // set data provider to the chart
+            chart.dataProvider = dataProvider;
+            // this will force chart to rebuild using new data           
+            chart.validateData();
+        }
+        // method which creates chart
+        function createChart(){
+            // chart variable is declared in the top
+            chart = new AmCharts.AmSerialChart();
+            // here we tell the chart name of category
+            // field in our data provider.
+            // we called it "date" (look at parseCSV method)
+            chart.categoryField = "date";
+            // styles applied to the chart
+            // default general color used in the chart
+            chart.color = "#AAAAAA";
+            // length of the animation
+            chart.startDuration = 2;
+            // margins between graph and canvas border
+            chart.marginLeft = 15;
+            chart.marginRight = 80;
+            chart.marginBottom = 40;
+            // now we have to set up the category axis to parse dates
+            var catAxis = chart.categoryAxis;
+            catAxis.parseDates = true;
+            //catAxis.equalSpacing = true;
+            // styles applied to the category axis
+            // color of the axis line
+            catAxis.axisColor = "#2d66bb";
+            // color of the grid lines
+            catAxis.gridColor = "#2d66bb";
+            // styles applied to value axis
+            // we haven't set up a value axis until now,
+            // so we create one and apply styles to it
+            var valAxis = new AmCharts.ValueAxis();
+            // we want to display the value axis on the right side
+            valAxis.position = "right";
+            // color of the axis line
+            valAxis.axisColor = "#2d66bb";
+            // as we set fillAlpha, and fillColor we don't want grid to be visible
+            valAxis.gridAlpha = 0;
+            // each second gap between grid lines will be filled with this color
+            valAxis.fillColor = "#2d66bb";
+            // fill alpha
+            valAxis.fillAlpha = 0.1;
+            // length of each dash
+            valAxis.dashLength = 3;
+            // and finally we add the value axis to the chart
+            chart.addValueAxis(valAxis);
+            // chart must have a graph
+            var graph = new AmCharts.AmGraph();
+            // graph should know at what field from data
+            // provider it should get values.
+            // let's assign value1 field for this graph
+            graph.valueField = "value1";
+            // and add graph to the chart
+            // styles applied to the graph line
+            // color of the graph line
+            graph.lineColor = "#3a81ec";
+            // thicknes of the graph line
+            graph.lineThickness = 2;
+            // show round bullets for each point
+            graph.bullet = "round";
+            // length of each dash
+            graph.dashLength = 1;
+            graph.balloonText = "[[value1]]: [[value2]]";
+            chart.addListener("clickGraphItem", handleClick);
+            //chartCursor.bulletsEnabled = false;
+            chart.balloon.showBullet = false
+            chart.addGraph(graph);           
+            // 'chartdiv' is id of a container
+            // where our chart will be                       
+            chart.write('chartdiv');
+        }
+        
+        function handleClick(e)
+        {
+            
+            alert(e.item.dataContext.value2);           
+            }
+        </script>
+    </head>
+    <body style="background-color:#EEEEEE">
+        <div id="chartdiv" style="width:600px; height:400px; background-color:#FFFFFF"></div>
+    </body>
+</html> 

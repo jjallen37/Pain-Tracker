@@ -1,0 +1,14 @@
+General Categories
+User_ID
+Category ID
+Cardnality
+Text Options
+
+
+Medicine Category
+User_ID
+Medicine_ID
+Medicine Name
+Dosage
+Frequency
+Effect

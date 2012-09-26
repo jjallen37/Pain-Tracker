@@ -1,0 +1,20 @@
+.scale{
+	width:90px;
+	padding:1px;
+	text-align: center;
+}
+
+.scaletable {
+	width: auto;
+	margin-top: 12px;
+}
+
+.Description {
+	font-style: italic;
+	border: 2px solid #aaaaff;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 15px;
+	background-color: #ffffbb;
+}

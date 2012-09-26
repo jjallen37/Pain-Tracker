@@ -1,0 +1,86 @@
+.slefts
+{
+	float: left;
+	width: 230px;
+    padding-top: 10px;
+}
+
+.scenter
+{
+	float: left;
+	width: 670px;
+	padding: 5px;
+    padding-top: 10px;
+    padding-left: 4px;
+	border-left: 1px solid #82CAFA;
+	min-height: 425px;
+}
+
+.sright
+{
+	float: left;
+	width: 200px;
+	padding: 5px;
+    min-height: 425px;
+}
+
+.sreportright
+{
+	float: left;
+	width: 670px;
+	padding: 5px;
+    padding-top: 10px;
+    padding-left: 4px;
+	border-left: 1px solid #82CAFA;
+	min-height: 425px;
+}
+
+.scentered
+{
+	width: 720px;
+	margin-right: auto;
+	margin-left: auto;
+    min-height: 425px;
+}
+
+.policy
+{
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+    margin-top:10px;
+    min-height: 425px;
+}
+
+
+
+.center
+{
+	width: 720px;
+	margin-right: auto;
+	margin-left: auto;
+    min-height: 425px;
+    text-align: center;
+}
+
+.surveytable
+{
+    border-collapse: collapse;
+}
+
+.surveytable th
+{
+    border: 1px solid black;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.surveytable td
+{
+    border-top:1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px dashed black;
+    border-right: 1px dashed black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
