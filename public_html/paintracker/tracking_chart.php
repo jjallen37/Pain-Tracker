@@ -75,7 +75,7 @@ function print_page($user_id) {
         }
 
         $(document).ready(function() {               
-                                                 
+                                   	
             $.get('http://wwwx.cs.unc.edu/Courses/comp523-f12/paintracker/data.php', function(data) {
                                                     
                 //replace UNIX new line

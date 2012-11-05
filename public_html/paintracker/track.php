@@ -108,7 +108,9 @@ else if( $_GET['loc'] == "help")
 }
 else if( $_GET['loc'] == "dailys")
 {
-	include("tracking_survey.php");	print_survey_left();	print_page($user_id);
+	include("tracking_survey.php");	
+	// print_survey_left();	
+	print_page($user_id);
 }
 else if( $_GET['loc'] == "table")
 {
@@ -119,7 +121,7 @@ else if( $_GET['loc'] == "table")
 else if( $_GET['loc'] == "chart")
 {
     include("tracking_chart.php");
-    print_survey_left();
+    // print_survey_left();
     print_page($user_id);
 }
 else if( $_GET['loc'] == "create")

@@ -24,7 +24,7 @@ if (mysql_num_rows($sql) == 0) {
 } else {
 
     // Get list of all categories for the user
-    $query = "select category_name from User_Survey where userid = 1";
+    $query = "select category_name from User_Survey where userid = " . $user_id . " ORDER by categoryid";
     $categories = mysql_query($query) or die(mysql_error);
     $categoryString = "";
 
@@ -38,7 +38,7 @@ if (mysql_num_rows($sql) == 0) {
     echo "\n";
 
     // Get list of survey data for the user
-    $query = "select categoryid, relativevalue, actualvalue, datetime FROM User_Data where userid = 1";
+    $query = "select categoryid, relativevalue, actualvalue, datetime FROM User_Data where userid = " . $user_id . " ORDER by categoryid";
     $values = mysql_query($query) or die(mysql_error);
     $surveyData = "";
     

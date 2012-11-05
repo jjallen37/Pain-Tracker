@@ -1,8 +1,8 @@
 <?php
 connect_db();
 
-$id = 1;
-// $id = $_SESSION['id'];
+// $id = 1;
+$id = $_SESSION['id'];
 
 
 $categorySQL = mysql_query("SELECT * FROM User_Survey WHERE userid = $id ORDER by categoryid" );

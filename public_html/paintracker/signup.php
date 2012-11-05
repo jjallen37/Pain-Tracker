@@ -55,7 +55,7 @@ if( isset($_POST['username']) )
             //first things first, check if there is this username is taken
             connect_db();
 
-            $query = "select * from users where username = '$_POST[username]'";
+            $query = "select * from User where username = '$_POST[username]'";
             $sql = mysql_query($query) or handle_error(mysql_error()."\n".$query);
             if( mysql_num_rows($sql) != 0 )
             {
@@ -90,7 +90,7 @@ if( isset($_POST['username']) )
         {
             connect_db();
 
-            $query = "select * from users where email = '$_POST[email1]'";
+            $query = "select * from User where email = '$_POST[email1]'";
             $sql = mysql_query($query) or handle_error(mysql_error()."\n".$query);
             if( mysql_num_rows($sql) != 0 )
             {
@@ -105,30 +105,30 @@ if( isset($_POST['username']) )
             $fail_string .= "You must agree to the privacy policy to receive an account.<br>";
         }
         
-        $captchas = new CaptchasDotNet ('positivityratio', 'SRRIRu3WdWBppqDMJOq2XUWrf7aGg3feJRzQZqPm',
-                                    './tmp/captchasnet-random-strings','3600',
-                                    'abcdefghkmnopqrstuvwxyz','6',
-                                    '240','80');
-        $password      = $_POST['password'];
-        $random_string = $_POST['random'];
-        if( !$captchas->validate ($random_string) )
-        {
-            $failure++;
-            $fail_string .= "Each image can only be used one.  Please try again. <br>";
-        }
-        
-        if (!$captchas->verify ($password))
-        {
-            $failure++;
-            $fail_string .= "The characters you entered did not match the image.  A new image has been generated. <br>";
-        }
+        // $captchas = new CaptchasDotNet ('positivityratio', 'SRRIRu3WdWBppqDMJOq2XUWrf7aGg3feJRzQZqPm',
+                                    // './tmp/captchasnet-random-strings','3600',
+                                    // 'abcdefghkmnopqrstuvwxyz','6',
+                                    // '240','80');
+        // $password      = $_POST['password'];
+        // $random_string = $_POST['random'];
+        // if( !$captchas->validate ($random_string) )
+        // {
+            // $failure++;
+            // $fail_string .= "Each image can only be used one.  Please try again. <br>";
+        // }
+//         
+        // if (!$captchas->verify ($password))
+        // {
+            // $failure++;
+            // $fail_string .= "The characters you entered did not match the image.  A new image has been generated. <br>";
+        // }
     }
     
     if( $failure == 0 )
     {
         connect_db();
         $hash = generate_hash($_POST['username'], stripslashes($_POST['pass1']));
-        $query = "insert into users(username, name, email, zip, created, lastlogin, md5_pass,time_zone_offset) values( '$_POST[username]', '$_POST[displayname]', '$_POST[email1]', '$_POST[zip]', NOW(), NOW(), '$hash', $_POST[ddtz])";
+        $query = "insert into User(username, name, email, md5_pass, time_zone) values( '$_POST[username]', '$_POST[displayname]', '$_POST[email1]', '$hash', $_POST[ddtz])";
         if( !mysql_query($query) )
         {
             $fail_string = "An error occured while processing your information.  Please try again.<br>";

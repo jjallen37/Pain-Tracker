@@ -84,3 +84,31 @@
     padding-left: 5px;
     padding-right: 5px;
 }
+
+
+.wrapper{
+   position: relative;
+   float: left;
+   left: 98px;
+   width: 1048px;
+   margin-bottom: 10px;
+   background-color: #FFFFFF
+}
+.left1{
+   position: relative;
+   float: left;
+   left: 5px;
+   width: 514px;
+   height: 280px;
+   background-color: #FFFFFF
+}
+.left2{
+   position: relative;
+   float: left;
+   left: 15px;
+   width: 514px;
+   height: 200px;
+   background-color: #FFFFFF;
+   border-color: red;
+   border-style: solid;
+}
