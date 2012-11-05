@@ -1,0 +1,21 @@
+﻿Bonjour,
+
+Un nouveau commentaire a été marquée sur la page [page reference], situé à l'adresse suivante:
+[page url]
+
+Le commentaire battant pavillon a été faite par [poster] et se présente comme suit:
+
+************************
+
+[comment]
+
+************************
+
+Ce commentaire a été marquée, pour les raisons suivantes:
+[flag reasoning]
+
+Voici le lien à votre panneau d'administration:
+[admin link]
+
+Cordialement,
+

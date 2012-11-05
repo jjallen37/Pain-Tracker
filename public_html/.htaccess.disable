@@ -1,0 +1,16 @@
+<IFDefine !WWWXS>
+RedirectMatch (.*)$ https://wwwx.cs.unc.edu$1
+</IFDefine>
+
+<IFDefine SECURE>
+AuthName 'Computer Science Login:'
+AuthType Kerberos
+Satisfy any
+order deny,allow
+deny from all
+allow from .unc.edu
+require valid-user
+</IFDefine>
+<IFDefine !SECURE>
+RedirectMatch (.*)$ https://wwwx.cs.unc.edu$1
+</IFDefine>

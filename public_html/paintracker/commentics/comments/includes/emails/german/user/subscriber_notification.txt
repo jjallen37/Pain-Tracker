@@ -1,0 +1,23 @@
+﻿Hallo [name],
+
+Es wurde ein neuer Kommentar auf der Seite [page reference], mit folgender Adresse:
+[page url]
+
+Der Kommentar wurde von [poster] mit folgendem Inhalt erstellt:
+
+************************
+
+[comment]
+
+************************
+
+Um weitere Benachrichtigungen zu erhalten, klicken Sie auf den folgenden Reaktivierungslink:
+[activation link]
+
+Wenn Sie die Re-Aktivierungs-Link klicken zu vergessen, wird es automatisch in [re-activation days] Tagen wieder aktiviert werden.
+
+Alternativ können Sie den untenstehenden Link benutzen um das Abo zu kündigen:
+[unsubscribe link]
+
+Aufrichtig,
+

@@ -1,0 +1,424 @@
+/* Header colors: FFD073 (light) and A66F0D(dark) */
+
+body {
+	font-family: Arial;
+	text-align: center;
+	background: #FCE3B1;
+}
+
+div#header {
+	margin-top: -30px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	height: 124px;
+	text-align: left;
+	width: 1000px;
+	border-left: 1px solid #A66F0D;
+	border-right: 1px solid #A66F0D;
+}
+
+#header h1 {
+	margin-top: 30px;
+	padding-top: 15px;
+	margin-left: 50px;
+	margin-bottom: 15px;
+	font-size: 32pt;
+	text-align: left;
+	color: #A66F0D;
+}
+div#topper {
+	margin-top: 15px;
+	margin-bottom: 0px;
+	background-color: #FFD073;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	border-top: 1px solid #A66F0D;
+	border-left: 1px solid #A66F0D;
+	border-right: 1px solid #A66F0D;
+}
+
+div#footer {
+	margin-top: 0px;
+	background-color: #FFD073;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	border-bottom: 1px solid #A66F0D;
+	border-left: 1px solid #A66F0D;
+	border-right: 1px solid #A66F0D;
+}
+
+div.container {
+	margin-top: -18px;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 970px;
+	background: #FFFFFF;
+	text-align: left;
+	border-left: 1px solid #A66F0D;
+	border-right: 1px solid #A66F0D;
+}
+
+ul.topNav  {
+	margin-left: 50px;
+	padding:0px;
+	width:auto;
+}
+#topNav li{
+	float:left;
+	display:inline-block;
+}
+#topNav li a{
+	float:left;
+	font-family:tahoma, arial;
+	font-size:11px;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:35px;
+	display:inline-block;
+	text-decoration:none;
+	background:#A66F0D;
+	padding-left:12px;
+	padding-right:12px;
+	margin-top:5px;
+	border-right:1px dotted #FFFFFF;
+}
+#topNav li a:hover{
+	background:#FFFFFF;
+	color:#A66F0D;
+	text-decoration:none;
+	border-right:1px dotted #A66F0D;
+}
+
+p.quote {
+	text-align: center;
+	font-style: italic;
+	font-size: 12pt;
+	color: #015666;
+}
+
+ul.nobullet {
+	list-style-type: none;
+}
+
+ul.compact {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.compact li{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	text-indent: -20px;
+}
+
+h2 {
+	margin-left: 40px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+h2.center {
+	text-align: center;
+}
+
+p {
+	margin-left: 40px;
+	margin-right: 25px;
+}
+h3 {
+	margin-left: 40px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	color: #A66F0D;
+}
+
+
+div.cartoons {
+	float: right;
+	width: 200px;
+	margin-top: 25px;
+	padding-left: 15px;
+}
+
+table.calendar {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	border-color: black;
+	border-collapse: collapse;
+}
+
+table.calendar th {
+	border: 1px solid;
+	border-color: black;
+	border-collapse: collapse;
+	vertical-align: top;
+	padding: 10px;
+	text-align: center;
+}
+
+table.calendar td {
+	border: 1px solid;
+	border-color: black;
+	border-collapse: collapse;
+	vertical-align: top;
+	padding: 10px;
+}
+
+table.calendar tr {
+	border: 1px solid;
+	border-color: black;
+	border-collapse: collapse;
+	vertical-align: top;
+	padding: 10px;
+}
+
+table.calendar td.center {
+	text-align: center;
+}
+
+table.calendar td.bigletters {
+	font-size: 25pt;
+	text-align: center;
+}
+
+table.calendar td.dayoff {
+	border: 1px solid;
+	border-collapse: collapse;
+	border-color: black;
+	vertical-align: top;
+	font-weight: bold;
+	color: red;
+	padding-left:10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+table.calendar td.highlight {
+	border: 1px solid;
+	border-collapse: collapse;
+	border-color: black;
+	vertical-align: top;
+	font-weight: bold;
+	color: blue;
+	padding-left:10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+span.assign {
+	color:blue;
+}
+
+span.quiz {
+	color:green;
+}
+
+span.quiz a{
+	color:green;
+}
+
+span.lecture {
+	color:black;
+}
+
+span.lecture a{
+	color:black;
+}
+
+span.lecture1 {
+	color:black;
+	margin-left: 20px;
+}
+
+span.lecture1 a{
+	color:black;
+}
+
+h1 {
+	text-align: center;
+	font-size: 30pt;
+}
+
+table.toc {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table.toc th {
+	vertical-align: top;
+	font-weight: bold;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 5px;
+}
+
+table.toc td{
+	vertical-align: top;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 10px;
+}
+
+table.toc tr.last {
+	vertical-align: top;
+	border-bottom: 5px solid black;
+	border-collapse: collapse;
+	padding: 5px;	
+}
+/* team assignments */
+table.assign {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 90%;
+	font-size: 8pt;
+}
+
+table.assign th {
+	vertical-align: top;
+	font-weight: bold;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 2px;
+	font-size: 8pt;
+}
+
+table.assign td{
+	vertical-align: top;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 2px;
+	font-size: 8pt;
+}
+
+table.assign tr.last {
+	vertical-align: top;
+	border-bottom: 5px solid black;
+	border-collapse: collapse;
+	padding: 2px;	
+	font-size: 8pt;
+}
+
+/* simple table */
+table.simple {
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.simple th, tr, td {
+	border: none;
+}
+table.compact {
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+table.compact th, tr, td {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+table.twocol {
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+table.twocol th, tr, td {
+	border: none;
+	text-align: left;
+	vertical-align: top;
+}
+
+table.nolines {
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.nolines th, tr, td {
+	border: none;
+	text-align: left;
+	vertical-align: top;
+}
+tr {
+	vertical-align: top;
+}
+	
+td {
+	padding: 5px;
+}
+
+div.code{
+	font-family: monospace;
+	margin-left: 25px;
+}
+div.tab{
+	margin-left: 25px;
+}
+img.pageview{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #015666;
+	padding: 0px;
+}
+
+.red {
+	color: red;
+}
+
+.container ul {
+	margin-left: 40px;
+}
+
+.container ol {
+	margin-left: 40px;
+}
+
+.container dl {
+	margin-left: 40px;
+}
+
+.guest {
+	font-weight: bold;
+	color: blue;	
+}
+
+caption {
+	padding: 5px;
+}

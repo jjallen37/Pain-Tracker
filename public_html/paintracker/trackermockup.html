@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Paintracking Interactive Tracker</title>
+
+<link rel="StyleSheet" href="site.css" type="text/css">
+<script>
+function activatePain()
+{
+document.getElementById("pain_button").style.background='#0000FF';
+document.getElementById("fatigue_button").style.background='#FF0000';
+document.getElementById("mood_button").style.background='#FF0000';
+document.getElementById("well_button").style.background='#FF0000';
+document.getElementById("pain_text").style.visibility="visible";
+document.getElementById("fatigue_text").style.visibility="hidden";
+document.getElementById("mood_text").style.visibility="hidden";
+document.getElementById("well_text").style.visibility="hidden";
+}
+function activateFatigue(){
+document.getElementById("pain_button").style.background='#FF0000';
+document.getElementById("fatigue_button").style.background='#0000FF';
+document.getElementById("mood_button").style.background='#FF0000';
+document.getElementById("well_button").style.background='#FF0000';
+document.getElementById("fatigue_text").style.visibility="visible";
+document.getElementById("pain_text").style.visibility="hidden";
+document.getElementById("mood_text").style.visibility="hidden";
+document.getElementById("well_text").style.visibility="hidden";
+}
+function activateMood(){document.getElementById("pain_button").style.background='#FF0000';
+document.getElementById("fatigue_button").style.background='#FF0000';
+document.getElementById("mood_button").style.background='#0000FF';
+document.getElementById("well_button").style.background='#FF0000';
+document.getElementById("pain_text").style.visibility="hidden";
+document.getElementById("fatigue_text").style.visibility="hidden";
+document.getElementById("mood_text").style.visibility="visible";
+document.getElementById("well_text").style.visibility="hidden";
+}
+function activateWell()
+{
+document.getElementById("pain_button").style.background='#FF0000';
+document.getElementById("fatigue_button").style.background='#FF0000';
+document.getElementById("mood_button").style.background='#FF0000';
+document.getElementById("well_button").style.background='#0000FF';
+document.getElementById("pain_text").style.visibility="hidden";
+document.getElementById("fatigue_text").style.visibility="hidden";
+document.getElementById("mood_text").style.visibility="hidden";
+document.getElementById("well_text").style.visibility="visible";
+}
+</script>
+</head>  
+<body style="background-color: rgb(255, 255, 255);">
+<div class="top">
+<div class="leftmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="book.html">About the book</a></li>
+<li><a href="archives.html">Article Archives</a></li>
+</ul>
+</div>
+<div class="header"><img src="header.gif"></div>
+<div class="rightmenu">
+<ul>
+<li><a href="fms06.html">About the Author</a></li>
+<li><a href="buy.html">Buy the book</a></li>
+<li><a href="tracker.php">Paintracker</a></li>
+</ul>
+</div>
+</div>
+<div style="margin-left: 82px; width: 784px;" class="body">
+<div style="text-align: center; height: 60px;"><button type="button" id="pain_button" onclick="activatePain()" style="background: rgb(0, 0, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: white; font-size: 20px;">PAIN</button>
+<button type="button" id="fatigue_button" onclick="activateFatigue()" style="background: rgb(255, 0, 0) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: white; font-size: 20px;">FATIGUE</button>
+<button type="button" id="mood_button" onclick="activateMood()" style="background: rgb(255, 0, 0) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: white; font-size: 20px;">MOOD</button>
+<button type="button" id="well_button" onclick="activateWell()" style="background: rgb(255, 0, 0) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: white; font-size: 20px;">WELL-BEING</button></div>
+<div style="" top="" 200px="" left="" 100px="" position="" absolute="" z-index="" 1="">
+<div id="pain_text" style="border-style: solid; border-color: red; position: absolute; z-index: 1; top: 276px; left: 156px;">0
+- no pain <br>
+1 - minor <br>
+2 - mild <br>
+3 - annoying <br>
+4 - irritating <br>
+5 - significant <br>
+6 - challenging <br>
+7 - high <br>
+8 - severe <br>
+9 - disabling <br>
+10 - highest <br>
+</div>
+<div id="well_text" style="border-style: solid; border-color: red; position: absolute; z-index: 1; left: 706px; top: 276px; visibility: hidden;">
+1 - hopeless <br>
+2 - drained <br>
+3 - irritable <br>
+4 - discontent <br>
+5 - average <br>
+6 - decent <br>
+7 - satisfied <br>
+8 - pleasant <br>
+9 - content <br>
+10 - thriving <br>
+</div>
+<div id="fatigue_text" style="border-style: solid; border-color: red; position: absolute; z-index: 1; top: 276px; left: 340px; visibility: hidden;">0
+- refreshed <br>
+1 - present <br>
+2 - slow-minded <br>
+3 - low energy <br>
+4 - sleepy <br>
+5 - foggy <br>
+6 - tired <br>
+7 - lethargic <br>
+8 - exhausted <br>
+9 - depleted <br>
+10 - all-consuming <br>
+</div>
+<div id="mood_text" style="border-style: solid; border-color: red; position: absolute; z-index: 1; top: 276px; left: 522px; visibility: hidden;">
+1 - bitter <br>
+2 - awful <br>
+3 - exasperated <br>
+4 - agitated <br>
+5 - anxious <br>
+6 - adequate <br>
+7 - agreeable <br>
+8 - happy <br>
+9 - very good <br>
+10 - elated <br>
+</div>
+</div>
+<div style="position: absolute; z-index: 1; top: 276px; left: 156px;"></div>
+<div style="margin-left: 0px; width: 802px; height: 405px;" class="footer"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="position: absolute; z-index: 1; top: 694px; left: 442px;"><img src="pen.gif"></div>
+<div style="text-align: center; height: 60px;"><button type="button" id="pain_button" onclick="activatePain()" style="background: rgb(200, 200, 200) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: black; font-size: 20px;">Customize Words</button>
+<button type="button" id="pain_button" onclick="activatePain()" style="background: rgb(200, 200, 200) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; height: 50px; width: 180px; color: black; font-size: 20px;">Add to Survey</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Copyright Deborah
+<div style="position: absolute; z-index: 1; top: 278px; left: 434px;"></div>
+A. Barrett, PhD 2011
+</div>
+</div>
+</body></html>

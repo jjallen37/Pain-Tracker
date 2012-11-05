@@ -1,0 +1,23 @@
+﻿Bonjour [name],
+
+Un nouveau commentaire a été posté sur la page [page reference], situé à l'adresse suivante:
+[page url]
+
+Le commentaire a été faite par [poster] et se présente comme suit:
+
+************************
+
+[comment]
+
+************************
+
+Pour recevoir des notifications en outre, vous aurez besoin de re-activer votre abonnement en cliquant sur le lien ci-dessous:
+[activation link]
+
+Si vous oubliez de cliquer sur le lien ré-activation, elle sera automatiquement réactivé en [re-activation days] jours.
+
+Ou, pour annuler votre abonnement, vous pouvez vous désabonner en cliquant ici:
+[unsubscribe link]
+
+Cordialement,
+
